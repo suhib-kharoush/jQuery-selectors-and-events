@@ -13,14 +13,22 @@ function GalleryHorn(horn){
     arrayKeyword.push(this);
 }
 
-GalleryHorn.prototype.cloneRender = function(){
-    let cloneSection = $('.photo-template').clone();
-    cloneSection.find('h2').text(this.title);
-    cloneSection.find('img').attr('src', this.image_url);
-    cloneSection.find('p').text(this.description);
-    cloneSection.removeClass('photo-template');
-    cloneSection.attr('class', this.title);
-    $('main').append(cloneSection);
+// GalleryHorn.prototype.cloneRender = function(){
+//     let cloneSection = $('.photo-template').clone();
+//     cloneSection.find('h2').text(this.title);
+//     cloneSection.find('img').attr('src', this.image_url);
+//     cloneSection.find('p').text(this.description);
+//     cloneSection.removeClass('photo-template');
+//     cloneSection.attr('class', this.title);
+//     $('main').append(cloneSection);
+// }
+
+
+GalleryHorn.prototype.renderWithMustache = function(){
+    let template = $("#photo-template").html();
+    let html = Mustache.render(template, this);
+    $("#photo-template").append(html);
+
 }
 
 const ajaxSettings = {
@@ -31,7 +39,7 @@ const ajaxSettings = {
 $.ajax('data/page-1.json', ajaxSettings).then((data) => {
     data.forEach((horn) => {
         let hornObject = new GalleryHorn(horn);
-        hornObject.cloneRender();
+        hornObject.renderWithMustache();
         userOption.push(horn.keyword);
     });
    
@@ -48,7 +56,7 @@ $.ajax('data/page-1.json', ajaxSettings).then((data) => {
             $('main').append(newCloneSection);
             arrayKeyword.forEach((function(value){
                 if(keyName===value.keyword){
-                    value.cloneRender();
+                    value.renderWithMustache();
 
                 }
             }));
