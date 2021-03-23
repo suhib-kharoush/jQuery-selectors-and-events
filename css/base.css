@@ -1,0 +1,14 @@
+
+
+
+select{
+    display: block;
+    width: 220px;
+    height: 30px;
+    border: 3px solid #999;
+    font-size: 18px;
+    color: #295e80;
+    background-color: rgb(218, 210, 210);
+    border-radius: 5px;
+    box-shadow: 4px 4px rgb(240, 195, 195);
+  }

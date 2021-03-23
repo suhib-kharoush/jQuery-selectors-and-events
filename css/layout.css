@@ -1,0 +1,22 @@
+  
+main{
+
+    margin-top: 5%;
+    margin-left: 7%;
+    }
+
+
+
+    section{ 
+        box-sizing: border-box;
+        float:right;
+        width: 50%;
+        height: 50%;
+        margin-top: 50px;
+        margin-left: 50px;
+        padding: 4%;
+    }
+
+
+
+    
