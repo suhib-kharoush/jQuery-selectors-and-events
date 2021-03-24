@@ -13,6 +13,17 @@ function GalleryHorn(horn){
     arrayKeyword.push(this);
 }
 
+let SecondArrayKeyword = [];
+
+function GalleryHorn2(horn2){
+    this.image_url = horn2.image_url;
+    this.title = horn2.title;
+    this.description = horn2.description;
+    this.keyword = horn2.keyword;
+    this.horns = horn2.horns;
+    SecondArrayKeyword.push(this);
+}
+
 // GalleryHorn.prototype.cloneRender = function(){
 //     let cloneSection = $('.photo-template').clone();
 //     cloneSection.find('h2').text(this.title);
@@ -25,7 +36,16 @@ function GalleryHorn(horn){
 
 
 GalleryHorn.prototype.renderWithMustache = function(){
-    let template = $("#photo-template").html();
+    let template = $("#template").html();
+    $("main").append(Mustache.render(template, this))
+    let html = Mustache.render(template, this);
+    $("#photo-template").append(html);
+
+}
+
+GalleryHorn2.prototype.renderWithMustache2 = function(){
+    let template = $("#template").html();
+    $("#secondPage").append(Mustache.render(template, this));
     let html = Mustache.render(template, this);
     $("#photo-template").append(html);
 
@@ -63,3 +83,5 @@ $.ajax('data/page-1.json', ajaxSettings).then((data) => {
         });
     });
 })
+
+

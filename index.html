@@ -13,18 +13,22 @@
       <select>
         <option value="default">Filter by Keyword</option>
       </select>
+      <button id="firstPage">1</button>
+      <button id="secondPage">2</button>
     </header>
     <main>
       <section class="photo-template">
         <template id="template" type = "text/x-tmpl-mustache">
-        <h2></h2>
-        <img src="" alt="">
-        <p></p>
+        <h2>{{title}}</h2>
+        <img src="{{image_url}}" alt="">
+        <p>{{description}}</p>
       </template>
       </section>
       <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+      <script src="https://unpkg.com/mustache@latest"></script>
       <script src="js/app.js"></script>
     </main>
+    <main id="secondPage"></main>
     <footer>
       &copy; 2018 Code Fellows
     </footer>
