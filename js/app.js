@@ -13,6 +13,7 @@ function GalleryHorn(horn){
     arrayKeyword.push(this);
 }
 
+
 GalleryHorn.prototype.cloneRender = function(){
     let cloneSection = $('.photo-template').clone();
     cloneSection.find('h2').text(this.title);
