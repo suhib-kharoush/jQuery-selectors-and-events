@@ -13,6 +13,7 @@ function GalleryHorn(horn){
     arrayKeyword.push(this);
 }
 
+
 let SecondArrayKeyword = [];
 
 function GalleryHorn2(horn2){
@@ -48,6 +49,17 @@ GalleryHorn2.prototype.renderWithMustache2 = function(){
     $("#secondPage").append(Mustache.render(template, this));
     let html = Mustache.render(template, this);
     $("#photo-template").append(html);
+
+
+
+GalleryHorn.prototype.cloneRender = function(){
+    let cloneSection = $('.photo-template').clone();
+    cloneSection.find('h2').text(this.title);
+    cloneSection.find('img').attr('src', this.image_url);
+    cloneSection.find('p').text(this.description);
+    cloneSection.removeClass('photo-template');
+    cloneSection.attr('class', this.title);
+    $('main').append(cloneSection);
 
 }
 
