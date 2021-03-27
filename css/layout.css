@@ -1,13 +1,4 @@
   main {
       margin-top: 5%;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  #photo-template {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-gap: 10px;
-      background-color: #2196F3;
-      padding: 10px
+      margin-left: 7%;
   }
