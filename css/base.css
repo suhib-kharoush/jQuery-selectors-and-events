@@ -1,7 +1,4 @@
-
-
-
-select{
+select {
     display: block;
     width: 220px;
     height: 30px;
@@ -11,4 +8,5 @@ select{
     background-color: rgb(218, 210, 210);
     border-radius: 5px;
     box-shadow: 4px 4px rgb(240, 195, 195);
-  }
+    margin: auto;
+}
