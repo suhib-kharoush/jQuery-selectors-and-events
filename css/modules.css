@@ -1,23 +1,30 @@
-img {
-    width: 100px;
-    height: 100px;
-}
-
-.photo-template {
-    display: none;
-}
-
-h1 {
-    text-align: center;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-footer {
-    clear: both;
-}
+ img {
+     width: 100px;
+     height: 100px;
+ }
+ 
+ h1 {
+     text-align: center;
+ }
+ 
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+ 
+ footer {
+     clear: both;
+ }
+ 
+ */ select {
+     width: 50%;
+     font-size: 1.25rem;
+     cursor: pointer;
+     line-height: 1.1;
+     background-color: #3a1525;
+     box-shadow: 0 5px 25px rgba(255, 0, 0, 0.2);
+     color: #ffe4e4;
+     text-align-last: center;
+ }
