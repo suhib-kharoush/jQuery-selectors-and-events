@@ -10,3 +10,10 @@ select {
     box-shadow: 4px 4px rgb(240, 195, 195);
     margin: auto;
 }
+
+footer {
+    display: block;
+    height: 65px;
+    text-align: center;
+    padding: 10px;
+}
