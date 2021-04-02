@@ -1,3 +1,9 @@
+main {
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
+
 select {
     display: block;
     width: 220px;

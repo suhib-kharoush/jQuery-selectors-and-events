@@ -5,6 +5,9 @@
   }
   
   #photo-template {
+      display: flexbox;
+      flex-wrap: wrap;
+      flex-wrap: nowrap;
       display: grid;
       grid-template-columns: auto auto auto auto;
       grid-gap: 10px;
